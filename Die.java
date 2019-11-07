@@ -7,7 +7,7 @@
  */
 public class Die
 {
-   int faceValue = 0;
+   int faceValue;
     /**
     * gets the value of the rolled die 
     * @return the value of the rolled die
@@ -21,7 +21,7 @@ public class Die
     */ 
    public void roll()
    {
-       faceValue = (int)(Math.random()*6 + 1);
+       faceValue = (int)(Math.random()*7);
    }
    /**
     * overrides the Java string method to return the value of the rolled die 
