@@ -36,4 +36,9 @@ public class Game
         int valTwo = dieOne.getValue();
         return valOne + valTwo;
     }
+    public int counter(int num)
+    {
+        num = ((Math.random)*6 +1);
+    }
+    
 }
