@@ -1,4 +1,3 @@
-
 /**
  * simulates the rolling of a die
  *
@@ -14,14 +13,14 @@ public class Die
     */ 
    public int getValue()
    {
-        return faceValue;
+      return faceValue;
    }
    /**
     * simulates the rolling of the die
     */ 
    public void roll()
    {
-       faceValue = (int)(Math.random()*7);
+       faceValue = (int)(Math.random()*6 + 1);
    }
    /**
     * overrides the Java string method to return the value of the rolled die 
@@ -33,9 +32,4 @@ public class Die
    {
       return ("" + faceValue);
    }
-    
-    
 }
-
-
-    
