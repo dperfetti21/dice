@@ -47,22 +47,42 @@ public class Game
 
    /**
      * counts the number of times it takes to roll a specified number
-     * @param num a number that the die must roll to
+     * @param num a number that the die must roll to (this number is between
+     * 1 and 6)
      * @return the number of times it takes for the die to roll to a specified
      * number
      */
     public int counter(int num)
     {
-        int currentFaceVal;
-        int counter = 0; 
+        Die dieTwo = new Die();
+        dieTwo.roll();
+        int counter = 0;
+        int faceValCurrent;
         do
-            {
-                counter ++;
-                currentFaceVal = ((int)Math.random()*6 + 1);
-            }
-         while (currentFaceVal != num);
+        {
+         counter ++;   
+         dieTwo.roll();
+         faceValCurrent = dieTwo.getValue();
+        }
+        while (faceValCurrent != num);
         return counter;
     }
-
+   /**
+    * simulates the playing of a game in which player 1 will always win and player 2 will
+    * not realize what is happening
+    */
+   public void playUnfairGame ()
+   {
+     int playerOne = rollTwoDice();
+     int playerTwo = rollTwoDice();
+     do
+     {
+         playerOne = rollTwoDice();
+     }
+     while(playerOne <= playerTwo);
+     System.out.println(playerOne);
+     System.out.println(playerTwo);
+     System.out.println ("player 1 wins");
+   }
 }
 
