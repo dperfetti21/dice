@@ -67,7 +67,7 @@ public class Game
         while (faceValCurrent != num);
         return counter;
     }
-   /**
+    /**
     * simulates the playing of a game in which player 1 will always win and player 2 will
     * not realize what is happening
     */
