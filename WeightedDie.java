@@ -4,7 +4,7 @@
  * @author Declinda Perfetti
  * @version November 2019
  */
-public class WieghtedDie
+public class WeightedDie
 {
     int faceValue;
     /**
@@ -38,5 +38,20 @@ public class WieghtedDie
     public String toString()
     {
         return ("" + faceValue);
+    }
+    public int counter(int num)
+    {
+        WeightedDie dieTwo = new WeightedDie();
+        dieTwo.roll();
+        int counter = 0;
+        int faceValCurrent;
+        do
+        {
+         counter ++;   
+         dieTwo.roll();
+         faceValCurrent = dieTwo.getValue();
+        }
+        while (faceValCurrent != num);
+        return counter;
     }
 }
