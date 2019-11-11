@@ -84,5 +84,26 @@ public class Game
      System.out.println(playerTwo);
      System.out.println ("player 1 wins");
    }
+   /**
+    * counts the number of times it will take to roll a weighted die to reach a certain 
+    * number
+    * @param num the number that the die must be rolled to 
+    * @return the number of times it takes to roll the die to the specific number
+    */  
+   public int weightedCounter(int num)
+    {
+        WeightedDie dieTwo = new WeightedDie();
+        dieTwo.roll();
+        int counter = 0;
+        int faceValCurrent;
+        do
+        {
+         counter ++;   
+         dieTwo.roll();
+         faceValCurrent = dieTwo.getValue();
+        }
+        while (faceValCurrent != num);
+        return counter;
+    }
 }
 

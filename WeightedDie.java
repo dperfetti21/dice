@@ -39,19 +39,4 @@ public class WeightedDie
     {
         return ("" + faceValue);
     }
-    public int counter(int num)
-    {
-        WeightedDie dieTwo = new WeightedDie();
-        dieTwo.roll();
-        int counter = 0;
-        int faceValCurrent;
-        do
-        {
-         counter ++;   
-         dieTwo.roll();
-         faceValCurrent = dieTwo.getValue();
-        }
-        while (faceValCurrent != num);
-        return counter;
-    }
 }
