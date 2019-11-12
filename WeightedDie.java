@@ -1,5 +1,5 @@
 /**
- * simulates the rolling of a die
+ * simulates the rolling of a weighted die
  *
  * @author Declinda Perfetti
  * @version November 2019
