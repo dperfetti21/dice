@@ -22,10 +22,18 @@ public class WeightedDie
      */ 
     public void roll()
     {
-        faceValue = (int)(Math.random()*6 + 1);
-        if (faceValue%2 != 0)
+        faceValue = (int)(Math.random()*9 + 1);
+        if (faceValue == 7)
         {
-            faceValue = (int)(Math.random()*6 +1);
+            faceValue = 2;
+        }
+        if (faceValue == 8)
+        {
+            faceValue = 4;
+        }
+        if (faceValue == 9)
+        {
+            faceValue = 6;
         }
     }
 
